@@ -1,0 +1,188 @@
+/* --- Reset Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a; /* Hitam Pekat (Soft Black) */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Variabel Warna --- */
+:root {
+    --primary-black: #0a0a0a;
+    --dark-gray: #1a1a1a;
+    --white: #ffffff;
+    --electric-blue: #00bfff; /* Biru Electric/Neon */
+}
+
+/* --- Header --- */
+header {
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo .highlight {
+    color: var(--electric-blue);
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--electric-blue);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/1920/1080?random=1');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid var(--electric-blue);
+    color: var(--electric-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--electric-blue);
+    color: var(--primary-black);
+    box-shadow: 0 0 15px var(--electric-blue);
+}
+
+/* --- Gallery Section --- */
+.gallery-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.section-title .highlight {
+    color: var(--electric-blue);
+}
+
+/* --- Grid Layout --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    height: 250px; /* Tinggi kotak foto */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(30%); /* Foto默认 ada sedikit grayscale */
+}
+
+/* Hover Effect - Foto */
+.photo-card:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Overlay Text saat Hover */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 191, 255, 0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-gray);
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Pengaturan dasar dokumen -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Sabran Attawab</title>
+  <!-- Hubungkan file CSS utama -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HERO: bagian pembuka halaman -->
+  <header class="hero" id="home">
+    <!-- Navbar -->
+    <nav class="nav container">
+      <h1 class="logo">Sabran At-Tawab</h1>
+      <div class="menu">
+        <a href="#about">Tentang</a>
+        <a href="#skills">Skill</a>
+        <a href="#projects">Project</a>
+        <a href="#contact">Kontak</a>
+        <a href="index2.html">Galeri</a>
+      </div>
+    </nav>
+
+    <!-- Konten utama hero (teks + foto profil) -->
+    <div class="container hero-content">
+      <div class="hero-grid">
+        <div>
+          <p class="badge">My Portofolio </p>
+          <h2>Halo, saya <span> Sabran At-Tawab </span></h2>
+          <p>
+            "The patience of those who constantly turn back (in repentance) to Allah.".
+          </p>
+          <a href="#projects" class="btn">Lihat Proyek</a>
+        </div>
+
+        <figure class="profile-card">
+          <img src="foto/profile-extra.png" alt="" class="profile-img" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- Konten utama halaman -->
+  <main>
+    <!-- Section tentang diri -->
+    <section class="section container" id="about">
+      <h3>Tentang Saya</h3>
+      <p>
+        Saya adalah mahasiswa jurusan sistem informasi yang masih dalam tahap belajar dan mengembangkan diri. Website
+        ini adalah website portofolio saya yang masih dalam tahap pengembangan saya akan memperbaiki dan menambahkan fitur-fitur baru.
+        Kalau ingin memberikan saran atau kritik silahkan hubungi saya melalui link email atau instagram yang sudah saya sediakan.
+      </p>
+    </section>
+
+    <!-- Section keahlian -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h3>Keahlian</h3>
+        <div class="grid skills-grid">
+          <article class="card"><h4>HTML,CSS,JavaScript</h4><p>Masih dalam tahap belajar dan mengembangkan diri. </p></article>
+          <article class="card"><h4>postgreSql,MySQL,Excel</h4><p>Sudah pernah membuat beberapa project menggunakan database dan excel.Tetapi masih perlu belajar lebih lanjut.</p></article>
+          <article class="card"><h4>Design(Figma,Canva)</h4><p>sudah pernah membuat desain untuk beberapa project.Tetapi masih perlu belajar lebih lanjut.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section proyek (slider HTML + CSS tanpa JavaScript) -->
+    <section class="section container" id="projects">
+      <h3>Hasil Project</h3>
+      <h4 class="projects-intro"> (Project ini saya kerjakan dalam hal untuk memperkembangkan skil saya dalam belajar) Ini adalah beberapa hasil project yang saya buat :</h4>
+      
+      
+
+      <div class="project-slider">
+        <!-- Radio dipakai sebagai state slide aktif -->
+        <input type="radio" name="proj-slide" id="proj-s1" class="slide-radio" checked />
+        <input type="radio" name="proj-slide" id="proj-s2" class="slide-radio" />
+        <input type="radio" name="proj-slide" id="proj-s3" class="slide-radio" />
+        <input type="radio" name="proj-slide" id="proj-s4" class="slide-radio" />
+
+
+        <!-- Viewport membatasi area slide -->
+        <div class="slides-viewport">
+          <div class="slides">
+            <figure class="slide">
+              <img src="foto/slide-kaos.png" alt="Desain kaos kelas — tampilan depan dan belakang" />
+              <figcaption>Desain kaos (Figma)</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="foto/slide-figma.png" alt="Desain UI aplikasi mobile di Figma (proses belajar)" />
+              <figcaption>UI mobile — Design UI (Figma) (Masih belajar)</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="foto/slide-falak.png" alt="website lanjah falakiyah mahika " />
+              <figcaption>Website Lanjah (Masih Proses)</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="foto/project-face.png" alt="python " />
+              <figcaption>Python Spotify</figcaption>
+          </div>
+        </div>
+
+        <!-- Tombol prev/next, label diarahkan ke radio target -->
+        <div class="slider-controls">
+          <div class="controls controls-1">
+            
+            <label for="proj-s3" class="slider-btn">← Sebelumnya</label>
+            <label for="proj-s2" class="slider-btn">Berikutnya →</label>
+          </div>
+          <div class="controls controls-2">
+            <label for="proj-s1" class="slider-btn">← Sebelumnya</label>
+            <label for="proj-s3" class="slider-btn">Berikutnya →</label>
+          </div>
+          <div class="controls controls-3">
+            <label for="proj-s2" class="slider-btn">← Sebelumnya</label>
+            <label for="proj-s1" class="slider-btn">Berikutnya →</label>
+           
+          </div>
+        </div>
+
+        <!-- Navigasi titik -->
+        <div class="slider-dots" aria-hidden="true">
+          <label for="proj-s1" class="slider-dot"><span class="visually-hidden">Slide 1</span></label>
+          <label for="proj-s2" class="slider-dot"><span class="visually-hidden">Slide 2</span></label>
+          <label for="proj-s3" class="slider-dot"><span class="visually-hidden">Slide 3</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section kontak -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <h3>Kontak</h3>
+        <p class="contact-text">Apabila ingin memberikan saran atau ingin kerjasama bisa menghubungi melalui kontak (sosial media) yang sudah disediakan :</p>
+        <div class="contact-list">
+          <a href="mailto:saadmukhtafybifaidillah@gmail.com">Gmail</a>
+          <!-- <a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a> -->
+          <a href="https://www.instagram.com/sabranattawab_/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Sabran At-Tawab </p>
+  </footer>
+
+  <!-- Script kecil untuk tahun otomatis -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
